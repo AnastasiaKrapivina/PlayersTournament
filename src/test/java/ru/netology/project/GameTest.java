@@ -25,6 +25,7 @@ class GameTest {
         Assertions.assertEquals(3, rep.getStrength());
 
     }
+
     @Test
     public void testBothRegisteredOne() {
         Game game = new Game();
@@ -34,9 +35,10 @@ class GameTest {
         game.register(player4);
 
         int expected = 1;
-        int actual =  game.round("Игрок2", "Игрок1");
+        int actual = game.round("Игрок2", "Игрок1");
         Assertions.assertEquals(expected, actual);
-        }
+    }
+
     @Test
     public void testBothRegisteredTwo() {
         Game game = new Game();
@@ -46,9 +48,10 @@ class GameTest {
         game.register(player4);
 
         int expected = 2;
-        int actual =  game.round("Игрок1", "Игрок2");
+        int actual = game.round("Игрок1", "Игрок2");
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void testBothRegisteredBoth() {
         Game game = new Game();
@@ -58,7 +61,7 @@ class GameTest {
         game.register(player4);
 
         int expected = 0;
-        int actual =  game.round("Игрок1", "Игрок4");
+        int actual = game.round("Игрок1", "Игрок4");
         Assertions.assertEquals(expected, actual);
     }
 
@@ -74,6 +77,7 @@ class GameTest {
             game.round("Игрок1", "Игрок8");
         });
     }
+
     @Test
     public void testOneRegisteredTwo() {
         Game game = new Game();
@@ -86,6 +90,7 @@ class GameTest {
             game.round("Игрок8", "Игрок1");
         });
     }
+
     @Test
     public void testNullRegistered() {
         Game game = new Game();
